@@ -229,11 +229,6 @@ li:nth-child(1) {
     }
     #social-media-links a:visited {
         color: #cc08bd;
+    }
 
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-    /* ... */
 }
