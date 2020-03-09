@@ -8,9 +8,10 @@
 
 body {
     padding: 20px 0;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 1fr 95% 1fr;
-    grid-template-rows: 50px 100px 296px 1fr 1fr 1fr 40px;
+    grid-template-rows: 50px 100px 296px 260px 1fr 1fr 40px;
+    grid-gap: 2px;
     grid-template-areas: ". skip ." ". company ." ". nav ." ". placeholder ." ". main ." ". sub ." ". footer ."
 }
 
@@ -40,6 +41,7 @@ h1 {
     margin: auto;
     width: auto;
     height: auto;
+    padding-bottom: 10px;
     font-size: 60px;
 }
 
@@ -66,8 +68,14 @@ li a {
     grid-area: placeholder;
 }
 
+.header-img img {
+    margin-top: 3px;
+}
+
 .main {
     grid-area: main;
+    margin: auto;
+    padding: 20px 0;
 }
 
 .main h2, .sub-section h2 {
@@ -80,6 +88,8 @@ li a {
 
 .sub-section {
     grid-area: sub;
+    font-style: italic;
+    padding: 20px 0;
 }
 
 footer {
@@ -89,6 +99,7 @@ footer {
     justify-content: flex-end;
 }
 
+
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     /* ... */
@@ -96,7 +107,33 @@ footer {
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    /* ... */
+
+    body {
+        grid-template-columns: 1fr 65% 35% 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 2px;
+        grid-template-areas:
+
+        ". company nav ."
+        ". img img ."
+        ". main sub ."
+        ". footer footer ."
+    }
+
+    li {
+        margin: 0;
+
+        flex-direction: row;
+    }
+
+    .hidden-on-desktop {
+        display: none;
+        height: 0%;
+        width: 0%;
+    }
+
+
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
