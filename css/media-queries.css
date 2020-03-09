@@ -112,7 +112,7 @@ footer {
         padding: 0;
         margin: 0 auto;
         grid-template-columns: 2% 63% 33% 2%;
-        grid-template-rows: 80px 1fr 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr 150px;
         grid-gap: 2px;
         grid-template-areas: ". company nav ." ". placeholder placeholder ." ". main sub ." ". footer footer ."
     }
@@ -151,16 +151,48 @@ li:nth-child(1) {
     }
 
     .header-img img{
-        width: 100%;
+        width: 1229px;
         height: 532px;
         margin: 50px 0;
     }
 
     .hidden-on-desktop {
         display: none;
-        height: 0%;
-        width: 0%;
+        height: 0;
+        width: 0;
     }
+
+
+
+
+
+
+
+    .main {
+        grid-area: main;
+        margin:0;
+        padding:0;
+    }
+
+    .main h2, .sub-section h2 {
+        margin: 0 0 60px 0;
+    }
+
+    .main p, .sub-section p {
+        font-weight: lighter;
+    }
+
+    .sub-section {
+        grid-area: sub;
+        font-style: italic;
+        padding:0;
+    }
+
+    footer {
+        grid-area: footer;
+        display: inline;
+    }
+
 
 
 }
