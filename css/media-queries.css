@@ -1,6 +1,105 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Arimo', sans-serif;
 }
 
+body {
+    padding: 20px 0;
+    display: inline-grid;
+    grid-template-columns: 1fr 95% 1fr;
+    grid-template-rows: 50px 100px 296px 1fr 1fr 1fr 40px;
+    grid-template-areas: ". skip ." ". company ." ". nav ." ". placeholder ." ". main ." ". sub ." ". footer ."
+}
 
+.hidden-on-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccdada;
+    background-color: #ceffff;
+    grid-area: skip;
+}
+
+.hidden-on-desktop a {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: company;
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-size: 60px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+li {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    width: auto;
+    height: auto;
+}
+
+.header-img {
+    grid-area: placeholder;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main h2, .sub-section h2 {
+    margin: 10px 0;
+}
+
+.main p, .sub-section p {
+    font-weight: lighter;
+}
+
+.sub-section {
+    grid-area: sub;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    /* ... */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    /* ... */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    /* ... */
+}
